@@ -23,6 +23,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import tekstack.StoreNameMandatoryCheck.utils.ExtentReportManager;
 import tekstack.StoreNameMandatoryCheck.utils.DateUtils;
 
@@ -42,12 +43,14 @@ public class BaseUI {
 
 		try {
 			if (browserName.equalsIgnoreCase("Chrome")) {
-				System.setProperty("webdriver.chrome.driver",
-						System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
+				//System.setProperty("webdriver.chrome.driver",
+						//System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe");
+						WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 			} else if (browserName.equalsIgnoreCase("Mozila")) {
-				System.setProperty("webdriver.gecko.driver",
-						System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\geckodriver.exe");
+				//System.setProperty("webdriver.gecko.driver",
+						//System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\geckodriver.exe");
+						WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}
 		} catch (Exception e) {
