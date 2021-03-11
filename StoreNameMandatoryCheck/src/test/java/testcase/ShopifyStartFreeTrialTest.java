@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import tekstack.StoreNameMandatoryCheck.base.BaseUI;
 
 public class ShopifyStartFreeTrialTest extends BaseUI {
-	public WebDriver driver;
+	
 
 	//Testing Shopify FreeTrial Screen in Chrome Browser
 	@Test
