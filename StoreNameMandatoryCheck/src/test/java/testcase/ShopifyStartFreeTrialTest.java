@@ -1,11 +1,13 @@
 package testcase;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import tekstack.StoreNameMandatoryCheck.base.BaseUI;
 
 public class ShopifyStartFreeTrialTest extends BaseUI {
+	public WebDriver driver;
 
 	//Testing Shopify FreeTrial Screen in Chrome Browser
 	@Test
